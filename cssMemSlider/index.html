@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+    <title>MemSlider</title>
 </head>
 <body>
     <div class = 'container'>
-        <div class="Spy-mem">
-            <img src="./images/Spy.png">  
-            <h3>You don't want to know that.</h3>
+        <div class="Inputs">
+            <input id="mem1" type="radio" name="mem" checked="">
+            <input id="mem2" type="radio" name="mem">
+            <input id="mem3" type="radio" name="mem">
+            <input id="mem4" type="radio" name="mem">
+            <input id="mem5" type="radio" name="mem">
+            <input id="mem6" type="radio" name="mem">
         </div>
-        <div class="Hasky-mem">
-            <img src="./images/Hasky Indian.jpg">  
-            <h3>Think about the future.</h3>
+        <div class="Cards_mem">
+            <div class="card">
+                <img src="./images/Project.gif">      
+            </div>
+            <div class="card">
+                <img src="./images/Spy.PNG">      
+            </div>
+            <div class="card">
+                <img src="./images/Hasky Indian.PNG">      
+            </div>
+            <div class="card">
+                <img src="./images/interview.PNG">      
+            </div>
+            <div class="card">
+                <img src="./images/ide.PNG">  
+            </div>
+            <div class="card">
+                <img src="./images/full stack.PNG">  
+            </div>
         </div>
-        <div class="Interview-mem">
-            <img src="./images/interview.jpg">  
-            <h3>Difficulties during the interview.</h3>
-        </div>
-        <div class="Ide-mem">
-            <img src="./images/ide.jpg">  
-            <h3>Dazzling IDE.</h3>
-        </div>
-        <div class="FullStack-mem">
-            <img src="./images/full stack.jpg">  
-            <h3>The goose is cunning. Be like a goose.</h3>
-        </div>
-        <div class="Project-mem">
-            <img src="./images/Project.gif">  
-            <h3>When I didn't finish work on Friday and decided to finish it on Monday.</h3>
+        <div class = "Navigation">
+            <div class= "dotes">
+                <label class="dote" for="mem1"></label>
+                <label class="dote" for="mem2"></label>
+                <label class="dote" for="mem3"></label>
+                <label class="dote" for="mem4"></label>
+                <label class="dote" for="mem5"></label>
+                <label class="dote" for="mem6"></label>
+            </div>
+            <div class="Cards_about">
+                <div class="about">When I decided to look at my code written a week ago.</div>
+                <div class="about">You don't want to know that.</div>
+                <div class="about">Think about the future.</div>
+                <div class="about">Difficulties during the interview.</div>
+                <div class="about">Dazzling IDE.</div>
+                <div class="about">The goose is cunning. Be like a goose.</div>
+            </div>
         </div>
     </div>    
 </body>

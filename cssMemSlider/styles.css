@@ -46,6 +46,7 @@ input[name="mem"] {
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+
 }
 
 .card img {
@@ -128,7 +129,7 @@ input[name="mem"] {
     margin-left: 0;
 } 
 #mem2:checked ~ .Cards_mem .next {
-    margin-left: -22%;
+    margin-left: -22.5%;
 } 
 #mem3:checked ~ .Cards_mem .next {
     margin-left: -54%;
@@ -142,3 +143,76 @@ input[name="mem"] {
 #mem6:checked ~ .Cards_mem .next {
     margin-left: -925%;
 } 
+
+@media (max-width: 780px) {
+
+    .Navigation {
+        flex-direction: column;
+    }
+
+    .Cards_about {
+        order: 2;
+        max-width: 90%;
+    }
+    .dotes {
+        order: 1;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+    .Cards_mem {
+        margin: 0 auto;
+    }
+    body {
+        font-size: 0.8rem;
+    }
+    .dote-mem {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+    .card {
+        width: 10%;
+    }
+    .next {
+        width: 20%;
+    }
+    
+    #mem1:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: 0;
+    }
+    #mem2:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: -100%;
+    }
+    #mem3:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: -200%;
+    }
+    #mem4:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: -300%;
+    }
+    #mem5:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: -400%;
+    }
+    #mem6:checked ~ .Navigation .Cards_about .about-move {
+        margin-left: -500%;
+    }
+    
+    #mem1:checked ~ .Cards_mem .next {
+        margin-left: 0;
+    } 
+    #mem2:checked ~ .Cards_mem .next {
+        margin-left: -25%;
+    } 
+    #mem3:checked ~ .Cards_mem .next {
+        margin-left: -56.5%;
+    } 
+    #mem4:checked ~ .Cards_mem .next {
+        margin-left: -113%;
+    } 
+    #mem5:checked ~ .Cards_mem .next {
+        margin-left: -245%;
+    } 
+    #mem6:checked ~ .Cards_mem .next {
+        margin-left: -905%;
+    } 
+}

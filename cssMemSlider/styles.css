@@ -1,49 +1,64 @@
 body {
     margin: 0 auto;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     scroll-behavior: smooth;
-    font-size: 1rem;
+    font-size: 1.1rem;
     background-image: url(./images/abstract.jpg);
     font-weight: 400; 
     font-family: 'Montserrat', sans-serif;
     font-style: normal;  
 }
 
+.wrapper {
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .container {
-    max-width: 40rem;
+    max-width: 50em;
     height: 100%;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     overflow: hidden;
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 4%);
 }
 
-.Inputs {
+input[name="mem"] {
     visibility: hidden;
-}
+} 
 
 .Cards_mem {
-    width: 600%;
+    width: 500%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 15%;
 }
 
 .card {
-    max-width: 40rem;
-    padding: 1rem;
+    max-width: 100%;
     transition: all .6s ease;
     display: flex;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .Navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 0.5em 3em 0.5em;
+    padding: 0 1.5em 3em 1.5em;
 }
 
 .dotes {
@@ -51,16 +66,22 @@ body {
     order: 2;
 }
 
-.dote {
+.dote-mem {
     width: 1rem;
     height: 1rem;
     display: inline-block;
-    background-color: blueviolet;
+    background-color: rgb(88, 82, 46);
     border-radius: 50%;
     cursor: pointer;
     margin: 0.2em;
     transition: all .6s ease;
 }
+
+.dote-mem:hover {
+    background-color: rgb(1, 199, 248);
+    border-radius: 50%;
+}
+
 .Cards_about {
     display: flex;
     overflow: hidden;
@@ -69,7 +90,55 @@ body {
 
 .about {
     min-width: 100%;
+    margin-left: 1em;
     display: flex;
     align-items: center;
     transition: all .6s ease;
 }
+
+#mem1:checked ~ .Navigation .dotes .dote .dote-mem1,
+#mem2:checked ~ .Navigation .dotes .dote .dote-mem2,
+#mem3:checked ~ .Navigation .dotes .dote .dote-mem3,
+#mem4:checked ~ .Navigation .dotes .dote .dote-mem4,
+#mem5:checked ~ .Navigation .dotes .dote .dote-mem5,
+#mem6:checked ~ .Navigation .dotes .dote .dote-mem6 {
+    background-color: rgb(1, 199, 248);
+}
+
+#mem1:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: 0;
+}
+#mem2:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: -100%;
+}
+#mem3:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: -200%;
+}
+#mem4:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: -300%;
+}
+#mem5:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: -400%;
+}
+#mem6:checked ~ .Navigation .Cards_about .about-move {
+    margin-left: -500%;
+}
+
+#mem1:checked ~ .Cards_mem .next {
+    margin-left: 0;
+} 
+#mem2:checked ~ .Cards_mem .next {
+    margin-left: -22%;
+} 
+#mem3:checked ~ .Cards_mem .next {
+    margin-left: -54%;
+} 
+#mem4:checked ~ .Cards_mem .next {
+    margin-left: -112%;
+} 
+#mem5:checked ~ .Cards_mem .next {
+    margin-left: -247%;
+} 
+#mem6:checked ~ .Cards_mem .next {
+    margin-left: -925%;
+} 
